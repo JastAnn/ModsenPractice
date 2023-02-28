@@ -1,14 +1,18 @@
-import React from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import main from "./site/page/main";
+import './css/main.css';
+import './css/search.css';
 
 function App() {
-return (
-        <div className="contact-card">
-            <img align="center" src=""/>
-            <h3><font color="#3AC1EF">▍Mr. Whiskerson</font></h3>
-            <p>Phone: (212) 555-1234</p>
-            <p>Email: mr.whiskaz@catnap.meow</p>
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/main" element={<main/>}/>
+                </Routes>
+            </BrowserRouter>
         </div>
-    )
+    );
 }
 
 export default App;
